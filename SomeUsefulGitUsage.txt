@@ -1,0 +1,29 @@
+`git clone /srv/repos /local/copy`
+Create branches A-D to represent the features you're working on. 	
+`git checkout -b A`
+`git checkout -b B`
+`git checkout -b C`
+`git checkout -b D`
+
+Feature B is very simple and you want to knock it out and get it into production ASAP. 	`git checkout B`
+[work in editor]
+`git commit -a`
+[peer review]
+`git format-patch`
+`git send-email` [options will vary]
+[peer gives you "thumbs up"]
+`git checkout master`
+`git merge B`
+`git push`
+
+ Get rid of unnecessary branch B. 	`git branch -d B`
+ 
+ Stashing Temporary Work
+ Switch to branch A, write 100 lines of code 	`git checkout A`
+ Switch to branch C  while waiting on a co-worker's advise for A 	
+ `git stash`
+`git checkout C`
+Work on C for a while, get advise from co-worker and resume work on A 	`git stash`
+`git checkout A`
+`git stash list`
+`git stash apply [stash name]`

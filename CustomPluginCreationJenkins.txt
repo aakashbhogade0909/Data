@@ -1,0 +1,52 @@
+Lab : Plugin creation in Jenkins
+
+Create project skeleton
+1. Go to : $HOME/.m2/settings.xml
+2. Make appropriate changes to settings.xml
+<settings>
+  <pluginGroups>
+    <pluginGroup>org.jenkins-ci.tools</pluginGroup>
+  </pluginGroups>
+  <profiles>
+    <profile>
+      <id>jenkins</id>
+      <activation>
+        <activeByDefault>true</activeByDefault>
+      </activation>
+      <repositories>
+        <repository>
+          <id>repo.jenkins-ci.org</id>
+          <url>http://repo.jenkins-ci.org/public/</url>
+        </repository>
+      </repositories>
+      <pluginRepositories>
+        <pluginRepository>
+          <id>repo.jenkins-ci.org</id>
+          <url>http://repo.jenkins-ci.org/public/</url>
+        </pluginRepository>
+      </pluginRepositories>
+    </profile>
+  </profiles>
+</settings>
+
+3. Use command :  mvn -cpu hpi:create
+If you are having problems with the latest Plugin version, you can also specify the version of the plugin that you want to use.
+
+mvn -cpu org.jenkins-ci.tools:maven-hpi-plugin:1.84:create
+During the installation Maven will ask you for the groupId and artifactId.
+
+Enter the groupId of your plugin: de.mb
+...
+Enter the artifactId of your plugin: nexus-metadata-plugin
+
+4. cd nexus-metadata-plugin
+5. mvn package
+6. Go to http://localhost:8080/ (jenkins url)
+7. Manage Jenkins -> Manage Plugins -> Advanced -> Upload Plugin
+8. Select nexus-metadata-plugin/target/nexus-metadata-plugin.hpi and upload to Jenkins server
+9. Click “Download now and install after restart”
+10. Restart Jenkins
+
+The plugin should be available after restarting Jenkins. Now you can go and configure the plugin.
+
+Jenkins Menu -> Manage Jenkins -> Configure System (search for Hello World Builder)

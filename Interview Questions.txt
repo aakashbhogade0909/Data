@@ -1,0 +1,34 @@
+1) Apache installation Location --conf folder
+2) Mysql Installation location --conf folder
+3) All port number details(smtp,ssh,mysql,ftp n others)
+4) Linux OS booting sequence--4 major step
+5) difference between EBS and S3
+6) Availibilty Zone and Region in AWS
+7) it is possible to create GIT repo inside GIT Repo --- & Why it is not good practice?
+8) what  is crontab
+9) Alternate option of Grep Command
+10) what is IAM
+11) public and private key
+12) how to change the branches in Git
+13) what is microservices in Azure 
+14) what is memcache
+15) what is Glacier
+16) what is the best option -1) one cookbook & multiple receipe
+                              2)  multiple cookbook with single receipe with each
+17) what is inside cookbook folder
+18) what was the problem faced  while using Chef and Git
+19) What is  devops
+20) how to connect the instance if you lost the pem file what is the option
+21) difference between NAC and security group
+22) what is VPC
+23) location of ssh configuration
+24) passwordless authntication
+25) what r the cloud service and difference between them
+26) how to  revert the commit in Git
+27) why do u require the Configuration management if u r having the autoscaling service in AWS/AZURE
+28) why do you want to change the company
+
+Major issue faced during project journey.
+
+
+

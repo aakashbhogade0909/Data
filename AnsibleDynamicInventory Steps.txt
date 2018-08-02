@@ -1,0 +1,19 @@
+mkdir DynamicInventory
+cd DynamicInventory/
+ls -ltr
+wget https://raw.githubusercontent.com/ansible/ansible/devel/contrib/inventory/ec2.py
+wget https://raw.githubusercontent.com/ansible/ansible/devel/contrib/inventory/ec2.ini
+vim ec2.ini
+chmod 755 ec2.py
+ansible -i ec2.py tag_Name_client* -m ping
+sudo apt install python-pip
+sudo pip install boto
+/home/ubuntu/DynamicInventory/ec2.py --list
+ansible -i ec2.py tag_Name_client* -m ping
+ansible -i /home/ubuntu/DynamicInventory/ec2.py tag_Name_ClientJenkins -u ec2-user -m ping
+
+
+
+
+
+sudo apt install python-minimal python-simplejson
